@@ -14,8 +14,8 @@ namespace Stoper {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
-		int sekundy = 0;
-		int minuty = 0;
+		int seconds = 0;
+		int minutes = 0;
 		int setne = 0;
 		int startstop = 1;
 		int sprawdzenie = 20;
@@ -132,8 +132,8 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 
 	timer1->Stop();
 	setne = 0;
-	sekundy = 0;
-	minuty = 0;
+	seconds = 0;
+	minutes = 0;
 	label1->Text = "00 : 00 : 00";
 	startstop = 1;
 }
@@ -143,61 +143,61 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 	if (setne == 100)
 	{
 		setne = 0;
-		sekundy++;
+		seconds++;
 	}
-	if (sekundy == 60)
+	if (seconds == 60)
 	{
-		sekundy = 0;
-		minuty++;
+		seconds = 0;
+		minutes++;
 	}
 
-	if (minuty <= 9)
+	if (minutes <= 9)
 	{
-		if (sekundy <= 9)
+		if (seconds <= 9)
 		{
 			if (setne <= 9)
 			{
-				label1->Text = "0" + minuty + " : 0" + sekundy + " : 0" + setne;
+				label1->Text = "0" + minutes + " : 0" + seconds + " : 0" + setne;
 			}
 			else
 			{
-				label1->Text = "0" + minuty + " : 0" + sekundy + " : " + setne;
+				label1->Text = "0" + minutes + " : 0" + seconds + " : " + setne;
 			}
 		}
 		else
 		{
 			if (setne <= 9)
 			{
-				label1->Text = "0" + minuty + " : " + sekundy + " : 0" + setne;
+				label1->Text = "0" + minutes + " : " + seconds + " : 0" + setne;
 			}
 			else
 			{
-				label1->Text = "0" + minuty + " : " + sekundy + " : " + setne;
+				label1->Text = "0" + minutes + " : " + seconds + " : " + setne;
 			}
 		}
 	}
 	else
 	{
-		if (sekundy <= 9)
+		if (seconds <= 9)
 		{
 			if (setne <= 9)
 			{
-				label1->Text = minuty + " : 0" + sekundy + " : 0" + setne;
+				label1->Text = minutes + " : 0" + seconds + " : 0" + setne;
 			}
 			else
 			{
-				label1->Text = minuty + " : 0" + sekundy + " : " + setne;
+				label1->Text = minutes + " : 0" + seconds + " : " + setne;
 			}
 		}
 		else
 		{
 			if (setne <= 9)
 			{
-				label1->Text = minuty + " : " + sekundy + " : 0" + setne;
+				label1->Text = minutes + " : " + seconds + " : 0" + setne;
 			}
 			else
 			{
-				label1->Text = minuty + " : " + sekundy + " : " + setne;
+				label1->Text = minutes + " : " + seconds + " : " + setne;
 			}
 		}
 	}
