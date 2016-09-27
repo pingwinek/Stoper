@@ -137,6 +137,8 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 	label1->Text = "00 : 00 : 00";
 	startstop = 1;
 }
+
+//implementing timer
 private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
 
 	setne++;
