@@ -18,7 +18,7 @@ namespace Stoper {
 		int minutes = 0;
 		int setne = 0;
 		int startstop = 1;
-		int sprawdzenie = 20;
+		int check = 20;
 
 	public:
 		MyForm(void)
